@@ -1,38 +1,1140 @@
-.App {
-  text-align: center;
+/* Duck Hunt: Monad Edition - Complete Military/Tactical Styles - Purple Monad Branding */
+
+/* Import futuristic fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #000000;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Duck images pattern background - Layer 1 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png');
+    background-size: 
+        40px 40px,
+        30px 30px,
+        45px 45px,
+        35px 35px,
+        50px 50px,
+        25px 25px,
+        42px 42px,
+        38px 38px,
+        28px 28px,
+        52px 52px,
+        33px 33px,
+        47px 47px;
+    background-position: 
+        10% 15%,
+        70% 25%,
+        25% 60%,
+        85% 70%,
+        45% 80%,
+        90% 40%,
+        5% 50%,
+        95% 15%,
+        30% 5%,
+        65% 90%,
+        50% 35%,
+        20% 85%;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    animation: duckFloat 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Duck images pattern background - Layer 2 */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png'),
+        url('./assets/ducknads.png');
+    background-size: 
+        38px 38px,
+        42px 42px,
+        28px 28px,
+        55px 55px,
+        32px 32px,
+        41px 41px,
+        29px 29px,
+        48px 48px,
+        36px 36px,
+        44px 44px;
+    background-position: 
+        60% 10%,
+        15% 45%,
+        80% 55%,
+        35% 30%,
+        75% 85%,
+        40% 65%,
+        85% 20%,
+        12% 75%,
+        55% 50%,
+        25% 20%;
+    background-repeat: no-repeat;
+    opacity: 0.20;
+    animation: duckFloat 25s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: -1;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes duckFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Game Container - Military/Gaming Inspired Design */
+.game-container {
+    width: 100%;
+    max-width: 1200px;
+    background: linear-gradient(145deg, 
+        rgba(20, 25, 35, 0.95) 0%,
+        rgba(15, 20, 30, 0.98) 50%,
+        rgba(10, 15, 25, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    border-radius: 0;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 0 0 2px rgba(99, 102, 241, 0.4),
+        0 0 0 4px rgba(0, 0, 0, 0.8),
+        0 20px 40px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(99, 102, 241, 0.1);
+}
+
+/* Additional tactical UI elements */
+.game-container {
+    position: relative;
+}
+
+/* Add corner targeting indicators to container */
+.game-container::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    border-left: 3px solid #6366f1;
+    border-top: 3px solid #6366f1;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.game-container::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-right: 3px solid #6366f1;
+    border-bottom: 3px solid #6366f1;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Enhanced Header - Military HUD Style */
+.game-header {
+    background: linear-gradient(135deg, 
+        rgba(20, 25, 35, 0.95) 0%,
+        rgba(30, 35, 45, 0.98) 50%,
+        rgba(25, 30, 40, 0.95) 100%);
+    border-bottom: 2px solid #6366f1;
+    border-top: 1px solid rgba(99, 102, 241, 0.3);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated scan line in header */
+.game-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        #6366f1 20%,
+        #8b5cf6 50%,
+        #6366f1 80%,
+        transparent 100%);
+    animation: headerScan 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes headerScan {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Add top-right and bottom-left corners */
+.game-header::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    border-right: 3px solid #6366f1;
+    border-top: 3px solid #6366f1;
+    z-index: 10;
+}
+
+.game-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    font-family: 'Orbitron', 'Rajdhani', monospace, sans-serif;
+    text-shadow: 
+        0 0 10px #6366f1,
+        0 0 20px rgba(99, 102, 241, 0.5),
+        2px 2px 4px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Glitch effect on title */
+.game-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #6366f1;
+    z-index: -1;
+    animation: glitch 4s infinite;
+}
+
+@keyframes glitch {
+    0%, 90%, 100% { transform: translate(0); }
+    10% { transform: translate(-1px, 1px); }
+    20% { transform: translate(1px, -1px); }
+    30% { transform: translate(-1px, -1px); }
+    40% { transform: translate(1px, 1px); }
+    50% { transform: translate(-1px, 1px); }
+    60% { transform: translate(1px, -1px); }
+    70% { transform: translate(-1px, -1px); }
+    80% { transform: translate(1px, 1px); }
+}
+
+/* Enhanced Stats - HUD Style Display */
+.game-stats {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    z-index: 2;
+    position: relative;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: linear-gradient(145deg, 
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(20, 20, 20, 0.8) 100%);
+    padding: 15px 20px;
+    border: 1px solid #6366f1;
+    border-radius: 0;
+    position: relative;
+    min-width: 80px;
+    overflow: hidden;
+}
+
+/* HUD corner cuts */
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12px 12px 0;
+    border-color: transparent #6366f1 transparent transparent;
+}
+
+.stat-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 0 0 12px;
+    border-color: transparent transparent transparent #6366f1;
+}
+
+.stat-item:hover {
+    background: linear-gradient(145deg, 
+        rgba(99, 102, 241, 0.1) 0%,
+        rgba(20, 20, 20, 0.9) 100%);
+    box-shadow: 
+        0 0 15px rgba(99, 102, 241, 0.4),
+        inset 0 0 15px rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Animated border glow for active stats */
+.stat-item.active {
+    animation: statGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes statGlow {
+    0% { 
+        border-color: #6366f1;
+        box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+    }
+    100% { 
+        border-color: #8b5cf6;
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
+    }
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6366f1;
+    font-family: 'Orbitron', monospace, sans-serif;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Orbitron', monospace, sans-serif;
+    letter-spacing: 1px;
+}
+
+.stat-sub {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* Enhanced Game Area - Tactical Display */
+.game-area {
+    position: relative;
+    background: linear-gradient(to bottom, #87ceeb 0%, #87ceeb 60%, #228b22 60%, #006400 100%);
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-top: 2px solid #6366f1;
+    border-bottom: 2px solid #6366f1;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Tactical grid overlay */
+.game-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            rgba(99, 102, 241, 0.08) 1px,
+            transparent 2px,
+            transparent 50px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            rgba(99, 102, 241, 0.08) 1px,
+            transparent 2px,
+            transparent 50px
+        );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Corner targeting indicators */
+.game-area::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid #6366f1;
+    border-top: 3px solid #6366f1;
+    opacity: 0.6;
+    z-index: 2;
+    animation: targetBlink 2s ease-in-out infinite;
+}
+
+@keyframes targetBlink {
+    0%, 50%, 100% { opacity: 0.6; }
+    25%, 75% { opacity: 1; }
+}
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: 500px;
+    cursor: crosshair;
+    border-radius: 0;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Enhanced Game Overlays - Military UI */
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.game-overlay.hidden {
+    display: none;
+}
+
+.overlay-content {
+    text-align: center;
+    background: linear-gradient(145deg, 
+        rgba(20, 25, 35, 0.95) 0%,
+        rgba(30, 35, 45, 0.98) 100%);
+    backdrop-filter: blur(20px);
+    padding: 40px 50px;
+    border: 2px solid #6366f1;
+    border-radius: 0;
+    box-shadow: 
+        0 0 30px rgba(99, 102, 241, 0.4),
+        inset 0 0 30px rgba(99, 102, 241, 0.1);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Corner cuts for overlay */
+.overlay-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #6366f1 transparent transparent;
+}
+
+.overlay-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: transparent transparent transparent #6366f1;
+}
+
+.overlay-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #6366f1;
+    text-shadow: 
+        0 0 10px #6366f1,
+        0 2px 10px rgba(99, 102, 241, 0.5);
+    font-family: 'Orbitron', monospace, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.overlay-content p {
+    margin-bottom: 18px;
+    opacity: 0.9;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+}
+
+/* Enhanced Button Styles - Tactical Design */
+.game-button {
+    background: linear-gradient(145deg, 
+        rgba(99, 102, 241, 0.9) 0%,
+        rgba(139, 92, 246, 0.9) 100%);
+    color: #ffffff;
+    border: 2px solid #6366f1;
+    padding: 15px 35px;
+    border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-family: 'Orbitron', monospace, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 0 20px rgba(99, 102, 241, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Button corner cuts */
+.game-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent #000000 transparent transparent;
+}
+
+.game-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 0 10px;
+    border-color: transparent transparent transparent #000000;
+}
+
+.game-button:hover {
+    background: linear-gradient(145deg, 
+        rgba(129, 132, 251, 1) 0%,
+        rgba(159, 122, 246, 1) 100%);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 30px rgba(99, 102, 241, 0.6),
+        0 5px 15px rgba(0, 0, 0, 0.4);
+    border-color: #8b5cf6;
+}
+
+.game-button:active {
+    transform: translateY(0px);
+    box-shadow: 
+        0 0 15px rgba(99, 102, 241, 0.8),
+        inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Instructions - Mission Briefing Style */
+.instructions {
+    background: linear-gradient(135deg, 
+        rgba(15, 20, 30, 0.95) 0%,
+        rgba(25, 30, 40, 0.98) 100%);
+    backdrop-filter: blur(15px);
+    padding: 30px 40px;
+    border-top: 2px solid #6366f1;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tech pattern overlay */
+.instructions::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent 0px,
+            rgba(99, 102, 241, 0.02) 1px,
+            transparent 2px,
+            transparent 10px
+        );
+    pointer-events: none;
+}
+
+.instructions::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    border-left: 3px solid #6366f1;
+    border-bottom: 3px solid #6366f1;
+    z-index: 10;
+}
+
+.instructions h3 {
+    color: #6366f1;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    text-align: center;
+    text-shadow: 
+        0 0 10px #6366f1,
+        0 2px 4px rgba(99, 102, 241, 0.3);
+    font-family: 'Orbitron', monospace, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Briefing Grid Layout */
+.briefing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.briefing-section {
+    background: linear-gradient(145deg, 
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(20, 20, 20, 0.6) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section corner cuts */
+.briefing-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px 0;
+    border-color: transparent #6366f1 transparent transparent;
+}
+
+.briefing-section h4 {
+    color: #6366f1;
+    font-size: 1.1rem;
+    font-family: 'Orbitron', monospace, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+}
+
+.briefing-section p {
+    margin-bottom: 8px;
+    opacity: 0.9;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.briefing-section p:hover {
+    opacity: 1;
+    color: #6366f1;
+    transform: translateX(3px);
+    transition: all 0.3s ease;
+}
+
+/* Special styling for score items */
+.score-item {
+    color: #6366f1;
+    font-weight: 700;
+    font-family: 'Orbitron', monospace, sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 80px;
+}
+
+/* Special duck type styling */
+.gold-duck {
+    color: #ffd700;
+    font-weight: 700;
+    font-family: 'Orbitron', monospace, sans-serif;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    letter-spacing: 1px;
+}
+
+.tiny-duck {
+    color: #87ceeb;
+    font-weight: 700;
+    font-family: 'Orbitron', monospace, sans-serif;
+    text-shadow: 0 0 8px rgba(135, 206, 235, 0.6);
+    letter-spacing: 1px;
+}
+
+/* Authentication Overlay Styles */
+
+/* Auth Overlay */
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.auth-overlay.hidden {
+    display: none;
+}
+
+.auth-content {
+    text-align: center;
+    background: linear-gradient(145deg, 
+        rgba(20, 25, 35, 0.95) 0%,
+        rgba(30, 35, 45, 0.98) 100%);
+    padding: 50px;
+    border: 2px solid #6366f1;
+    border-radius: 0;
+    box-shadow: 
+        0 0 30px rgba(99, 102, 241, 0.4),
+        inset 0 0 30px rgba(99, 102, 241, 0.1);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Corner cuts for auth content */
+.auth-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #6366f1 transparent transparent;
+}
+
+.auth-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: transparent transparent transparent #6366f1;
+}
+
+.auth-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #6366f1;
+    text-shadow: 
+        0 0 10px #6366f1,
+        0 2px 10px rgba(99, 102, 241, 0.5);
+    font-family: 'Orbitron', monospace, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.auth-content p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+}
+
+/* Auth Button */
+.auth-button {
+    background: linear-gradient(145deg, 
+        rgba(99, 102, 241, 0.9) 0%,
+        rgba(139, 92, 246, 0.9) 100%);
+    color: #ffffff;
+    border: 2px solid #6366f1;
+    padding: 18px 40px;
+    border-radius: 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-family: 'Orbitron', monospace, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 0 20px rgba(99, 102, 241, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.auth-button:hover {
+    background: linear-gradient(145deg, 
+        rgba(129, 132, 251, 1) 0%,
+        rgba(159, 122, 246, 1) 100%);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 30px rgba(99, 102, 241, 0.6),
+        0 5px 15px rgba(0, 0, 0, 0.4);
+    border-color: #8b5cf6;
+}
+
+/* Guest Link */
+.auth-note {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+.guest-link {
+    color: #6366f1;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.guest-link:hover {
+    color: #8b5cf6;
+}
+
+/* Player Info Bar */
+.player-info {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(145deg, 
+        rgba(20, 25, 35, 0.95) 0%,
+        rgba(30, 35, 45, 0.98) 100%);
+    border: 1px solid #6366f1;
+    padding: 15px 20px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.player-info.hidden {
+    display: none;
+}
+
+.player-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.player-details span:first-child {
+    color: #6366f1;
+    font-weight: 700;
+    font-family: 'Orbitron', monospace, sans-serif;
+    font-size: 0.9rem;
+}
+
+.player-address {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    font-family: 'Rajdhani', monospace, sans-serif;
+}
+
+.logout-button {
+    background: transparent;
+    border: 1px solid #6366f1;
+    color: #6366f1;
+    padding: 8px 15px;
+    border-radius: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace, sans-serif;
+    text-transform: uppercase;
+}
+
+.logout-button:hover {
+    background: #6366f1;
+    color: #ffffff;
+}
+
+/* Auth Prompt in Game End */
+.auth-prompt {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0;
+}
+
+.auth-prompt.hidden {
+    display: none;
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(10px);
+}
+
+.loading-overlay.hidden {
+    display: none;
+}
+
+.loading-content {
+    text-align: center;
+    color: #6366f1;
+    font-family: 'Orbitron', monospace, sans-serif;
+}
+
+.spinner {
+    border: 4px solid rgba(99, 102, 241, 0.3);
+    border-top: 4px solid #6366f1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .game-container {
+        border-radius: 0;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+    
+    .game-title {
+        font-size: 1.8rem;
+    }
+    
+    .game-stats {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .stat-item {
+        padding: 10px 16px;
+    }
+    
+    #gameCanvas {
+        height: 400px;
+    }
+    
+    .game-area {
+        min-height: 400px;
+    }
+    
+    .overlay-content {
+        padding: 35px 25px;
+        margin: 20px;
+    }
+    
+    .overlay-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .instructions {
+        padding: 25px 20px;
+    }
+    
+    .briefing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .briefing-section {
+        padding: 15px;
+    }
+    
+    .briefing-section h4 {
+        font-size: 1rem;
+    }
+    
+    .auth-content {
+        padding: 35px 25px;
+        margin: 20px;
+    }
+    
+    .auth-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .auth-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .player-info {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .game-stats {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .stat-item {
+        justify-content: center;
+    }
+    
+    #gameCanvas {
+        height: 300px;
+    }
+    
+    .game-area {
+        min-height: 300px;
+    }
+    
+    .overlay-content {
+        padding: 30px 20px;
+    }
+    
+    .game-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .briefing-grid {
+        gap: 15px;
+    }
+    
+    .briefing-section {
+        padding: 12px;
+    }
+    
+    .briefing-section p {
+        font-size: 0.9rem;
+    }
+    
+    .instructions h3 {
+        font-size: 1.3rem;
+    }
 }
