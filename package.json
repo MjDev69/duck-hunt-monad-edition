@@ -1,1 +1,69 @@
-{"name":"duck-hunt-monad","version":"0.1.0","private":true,"dependencies":{"@privy-io/react-auth":"^2.21.4","@testing-library/dom":"^10.4.1","@testing-library/jest-dom":"^6.7.0","@testing-library/react":"^16.3.0","@testing-library/user-event":"^13.5.0","react":"^18.3.1","react-dom":"^18.3.1","react-scripts":"5.0.1","web-vitals":"^2.1.4"},"scripts":{"start":"react-scripts start","build":"react-scripts build","test":"react-scripts test","eject":"react-scripts eject"},"eslintConfig":{"extends":["react-app","react-app/jest"]},"browserslist":{"production":[">0.2%","not dead","not op_mini all"],"development":["last 1 chrome version","last 1 firefox version","last 1 safari version"]}}
+{
+  "name": "duck-hunt-monad",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Duck Hunt game with Monad Games ID integration and on-chain score submission",
+  "homepage": "https://ducknads.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MjDev69/duck-hunt-monad-edition"
+  },
+  "dependencies": {
+    "@privy-io/react-auth": "^2.21.4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.7.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "ethers": "^6.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && vercel --prod",
+    "deploy:preview": "npm run build && vercel",
+    "analyze": "npm run build && npx bundle-analyzer build/static/js/*.js",
+    "lint": "eslint src/**/*.{js,jsx}",
+    "format": "prettier --write src/**/*.{js,jsx,css,md}"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "duck-hunt",
+    "monad",
+    "blockchain",
+    "game",
+    "web3",
+    "privy",
+    "react"
+  ]
+}
